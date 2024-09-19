@@ -10,20 +10,22 @@ let height = 400;
 
 // For the following parameters, it is in the order of x , y , z
 // adjust the position of the render
-let position = [0, -1, 0]; 
+let position = [0, -1, 0];
 
-// adjust the scale of the render, 
+// adjust the scale of the render,
 // adjust this number uniformly until your render can be seen clearly as demonstrated
-let scale = [0.05, 0.05, 0.05]; 
+let scale = [0.05, 0.05, 0.05];
 
 // adjust the rotation of the render
 // it uses Euler rotation calculations
 // for most cases you can work around the Math.PI / 2 value because it is a 90 degree rotation
-let rotation = [-Math.PI/2, 0, 0];
+let rotation = [-Math.PI / 2, 0, 0];
 
-// if you want to visualize the axes for ease of development 
+// if you want to visualize the axes for ease of development
 // you can turn it by setting it to true here
 let enableAxes = false;
+
+let stlFilePath = "../assets/benchy.stl";
 
 // ----------------------------------------------------------------
 const element = document.getElementById("render");
@@ -77,7 +79,7 @@ function addShadowedLight(x, y, z, color, intensity) {
 
 const loader = new STLLoader();
 loader.load(
-  "../assets/benchy.stl",
+  stlFilePath,
   function (geometry) {
     const material = new THREE.MeshPhongMaterial({
       color: 0xaaaaaa,
