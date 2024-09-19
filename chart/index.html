@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Title</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <!-- You can add what components you want to include here  -->
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../components/scroll-to-top/scroll-to-top.css">
+  <script src="../components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!--  -->
+</head>
+
+<body>
+  <div class="content">
+    <sl-button href="/">Back</sl-button>
+
+    <h2 id="pie-doughtnut">1. Pie and Doughnut Chart</h2>
+    <div style="display: flex; justify-content: space-around;">
+      <div style="width: 45%;">
+        <canvas id="pie-chart"></canvas>
+      </div>
+      <div style="width: 45%;">
+        <canvas id="doughnut-chart"></canvas>
+      </div>
+    </div>
+
+    <br />
+    <h2 id="bar">2. Bar Chart</h2>
+    <div>
+      <canvas id="bar-chart"></canvas>
+    </div>
+
+    <br />
+    <h2 id="line">3. Line Chart</h2>
+    <div>
+      <canvas id="line-chart"></canvas>
+    </div>
+
+    <br />
+    <h2 id="scatter">4. Scatter Chart</h2>
+    <div>
+      <canvas id="scatter-chart"></canvas>
+    </div>
+
+    <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+      <sl-icon name="arrow-up" label="Settings"></sl-icon>
+    </sl-button>
+
+    <script src="./chart.js"></script>
+</body>
+
+</html>
